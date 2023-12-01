@@ -13,14 +13,17 @@ import { check, PERMISSIONS, request } from 'react-native-permissions';
 
 import i18n from './src/i18n';
 import { I18nextProvider } from 'react-i18next';
-
+import { ThemeProvider } from './src/core';
 
 
 const App = () => {
   return (
-    <I18nextProvider i18n={i18n}>
-      <RootNavigation />
-    </I18nextProvider>
+    <ThemeProvider >
+      <I18nextProvider i18n={i18n}>
+        <RootNavigation />
+      </I18nextProvider>
+    </ThemeProvider>
+    
 
     
   )

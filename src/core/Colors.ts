@@ -80,6 +80,7 @@ const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   }
 };
+
 const Colors = {
   darkTheme,
   lightTheme,

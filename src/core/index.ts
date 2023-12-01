@@ -5,6 +5,8 @@ import Images from "./Images";
 import Strings from "./Strings";
 import Constants from "./Constants";
 import Icons from "./Icons";
+import ThemeProvider from "./ThemeContext";
+
 
 export {
     Colors,
@@ -14,4 +16,5 @@ export {
     Strings, 
     Constants, 
     Icons,
+    ThemeProvider
 };
