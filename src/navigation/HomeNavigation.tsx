@@ -11,11 +11,10 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 //tabbar
 import Home from '../screens/Home';
-import CityList from '../screens/CityList';
 
 
 //router
-import SearchCity from '../screens/SearchCity';
+
 
 
 const TabIcon = ({ focused, color, name }) => {
@@ -59,7 +58,7 @@ function MyTabs() {
             />
             <Tab.Screen 
                 name={"CityList"} 
-                component={CityList} 
+                component={View} 
                 options={{
                     tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? Colors.black:Colors.placeholderTextColor} name={"earth"} />,
                     
@@ -86,11 +85,7 @@ const HomeNavigation = memo(() => {
                 component={MyTabs}
                 options={{headerShown: false}}
             />
-            <HomeStack.Screen
-                name={'SearchCity'}
-                component={SearchCity}
-                options={{headerShown: false}}
-            />
+            
             
         
         </HomeStack.Navigator>
