@@ -11,39 +11,16 @@ import {StyleSheet, Text, View, Platform} from 'react-native';
 import RootNavigation from './src/navigation';
 import { check, PERMISSIONS, request } from 'react-native-permissions';
 
-import { PaperProvider } from 'react-native-paper';
-
-const requestLocationPermission = async () => {
-  try {
-    const permission = Platform.select({
-      ios: PERMISSIONS.IOS.LOCATION_WHEN_IN_USE,
-      android: PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
-    });
-
-    const permissionStatus = await check(permission);
-
-    if (permissionStatus !== 'granted') {
-      const requestStatus = await request(permission);
-      return requestStatus === 'granted';
-    } else {
-      return true;
-    }
-  } catch (error) {
-    console.error('Error requesting location permission: ', error);
-    return false;
-  }
-};
+import i18n from './src/i18n';
+import { I18nextProvider } from 'react-i18next';
 
 
 
 const App = () => {
-  useEffect(()=> {
-    requestLocationPermission();
-  }, [])
   return (
-
-
-    <RootNavigation />
+    <I18nextProvider i18n={i18n}>
+      <RootNavigation />
+    </I18nextProvider>
 
     
   )
