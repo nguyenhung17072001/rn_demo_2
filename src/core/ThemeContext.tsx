@@ -14,8 +14,6 @@ const initialContext: ThemeType = {
 export const ThemeContext = createContext<ThemeType>(initialContext);
 
 
-
-
 interface ThemeProviderProps {
     children: string | JSX.Element | JSX.Element[];
 }
