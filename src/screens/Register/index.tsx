@@ -8,7 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import Input from '../../components/Input';
 
-const Login = memo(() => {
+const Register = memo(() => {
     const navigation = useNavigation();
     const { t } = useTranslation();
     
@@ -26,7 +26,7 @@ const Login = memo(() => {
             
             <View>
                 <Text style={styles.loginText}>
-                    { t('login') }
+                    { t('register') }
                 </Text>
             </View>
 
@@ -44,19 +44,19 @@ const Login = memo(() => {
                     onChangeText={(text) => setPassword(text)}
                     secureTextEntry={true}
                 />
+                <Input 
+                    label={t('repassword')}
+                    placeholder={t('repassword')}
+                    value={password}
+                    onChangeText={(text) => setPassword(text)}
+                    secureTextEntry={true}
+                />
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.textButton}>
-                        { t('login') }
+                        { t('register') }
                     </Text>
                 </TouchableOpacity>
-                <View style={styles.row}>
-                    <Text onPress={() => navigation.navigate('Register')} style={styles.forgotPasswordText}>
-                        {t('register')}
-                    </Text>
-                    <Text style={styles.forgotPasswordText}>
-                        {t('forgot password')}
-                    </Text>
-                </View>
+                
             </View>
 
             <View />
@@ -67,4 +67,4 @@ const Login = memo(() => {
     );
 });
 
-export default Login;
+export default Register;

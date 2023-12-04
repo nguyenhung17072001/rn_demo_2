@@ -10,9 +10,10 @@ const styles = StyleSheet.create({
         color: "black",
         fontFamily: fonts.semiBold,
         fontSize: 14,
+        marginTop: constants.height * 0.01,
     },
     textInput: {
-        marginTop: constants.height * 0.01,
+        marginTop: constants.height * 0.006,
         borderRadius: 8,
         color: "black",
         borderWidth: 0.4,

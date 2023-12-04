@@ -18,7 +18,8 @@ const resources = {
             "password": "Password",
             "enter password": "Enter password",
             "forgot password": "Forgot password",
-            "register": "Register"
+            "register": "Register",
+            "repassword": "Repassword"
         }
     },
     vi: {
@@ -35,6 +36,7 @@ const resources = {
             "enter password": "Nhập mật khẩu",
             "forgot password": "Quên mật khẩu",
             "register": "Đăng ký",
+            "repassword": "Nhập lại mật khẩu"
         }
     }
 };
