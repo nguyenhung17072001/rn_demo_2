@@ -10,6 +10,7 @@ import Splash from '../screens/Splash';
 import LanguageSelection from '../screens/LanguageSelection';
 
 //navigation
+import AuthNavigation from './AuthNavigation';
 import HomeNavigation from './HomeNavigation';
 
 const Stack = createStackNavigator();
@@ -25,6 +26,11 @@ const RootNavigation = memo(() => {
         <Stack.Screen
           name={"LanguageSelection"}
           component={LanguageSelection}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={"AuthNavigation"}
+          component={AuthNavigation}
           options={{headerShown: false}}
         />
         

@@ -4,7 +4,7 @@ import { images, colors, strings } from '../../core';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Splash = memo(() => {
   const navigation = useNavigation();
@@ -12,10 +12,14 @@ const Splash = memo(() => {
 
   useEffect(() => {
     clearTimeout(timeout);
-    const timeout = setTimeout(() => {
-      
-      
-        navigation.replace('LanguageSelection');
+    const timeout = setTimeout( async() => {
+      const languageValue = await AsyncStorage.getItem("isSelectedlanguage")
+        if(languageValue == "isSelectedlanguage") {
+          navigation.replace('AuthNavigation');
+        } else {
+          navigation.replace('LanguageSelection');
+        }
+        
       
     }, 1500);
   }, []);
