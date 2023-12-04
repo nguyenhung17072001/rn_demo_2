@@ -7,12 +7,20 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
         translation: {
-            "slogan": "Hello"
+            "slogan": "Hello",
+            "selection language": "selection language",
+            "vi": "Vietnamese",
+            "en": "English",
+            "confirm": "Confirm",
         }
     },
     vi: {
         translation: {
-            "slogan": "Xin chào"
+            "slogan": "Xin chào",
+            "selection language": "Chọn ngôn ngữ",
+            "vi": "Tiếng Việt",
+            "en": "Tiếng Anh",
+            "confirm": "Xác nhận",
         }
     }
 };

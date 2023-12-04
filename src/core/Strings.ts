@@ -1,5 +1,5 @@
-const Strings = {
-  appName: 'Weather',
+const strings = {
+  appName: 'Demo App',
 };
 
-export default Strings;
+export default strings;

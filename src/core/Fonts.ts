@@ -1,4 +1,4 @@
-const Fonts = {
+const fonts = {
     regular: "Mulish-Regular",
     bold: "Mulish-Bold",
     italic: "Mulish-Italic",
@@ -7,4 +7,4 @@ const Fonts = {
     
 };
 
-export default Fonts;
+export default fonts;

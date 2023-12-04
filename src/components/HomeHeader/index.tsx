@@ -7,14 +7,14 @@ import {
     SafeAreaView, 
     TouchableOpacity
 } from 'react-native';
-import { Images, Colors, Strings, Constants } from '../../core';
+import { images, colors, strings, constants } from '../../core';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
 interface HeaderProps {
-    headerName: String;
+    headerName: string;
     action?: boolean;
     backAction?: boolean;
 }
@@ -26,7 +26,7 @@ const Header = memo((props: HeaderProps) => {
             <TouchableOpacity onPress={()=> navigation.goBack()}>
             {
                 props.backAction ?
-                <Icon name="arrow-back" size={28} color={Colors.blackText} />
+                <Icon name="arrow-back" size={28} color={"red"} />
                 : null
             }
             </TouchableOpacity>
@@ -35,7 +35,7 @@ const Header = memo((props: HeaderProps) => {
             </Text>
             {props.action ?
             <TouchableOpacity onPress={()=>navigation.navigate("SearchCity")}>
-                <Icon name="add" size={28} color={Colors.blackText} />
+                <Icon name="add" size={28} color={"#000000"} />
             </TouchableOpacity>
             : <View/>}
         </View>

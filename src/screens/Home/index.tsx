@@ -10,7 +10,7 @@ import {
     Button
 } from 'react-native';
 import { connect } from 'react-redux';
-import { Images, Colors, Strings, Constants } from '../../core';
+import { images, colors, strings, constants } from '../../core';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';

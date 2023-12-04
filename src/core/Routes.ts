@@ -1,7 +1,7 @@
-const Routes = {
+const routes = {
   //AuthNavigation
   Splash: 'Splash',
   
 };
 
-export default Routes;
+export default routes;

@@ -1,20 +1,20 @@
-import Colors from "./Colors";
-import Routes from "./Routes";
-import Fonts from "./Fonts";
-import Images from "./Images";
-import Strings from "./Strings";
-import Constants from "./Constants";
-import Icons from "./Icons";
+import colors from "./colors";
+import routes from "./routes";
+import fonts from "./fonts";
+import images from "./images";
+import strings from "./strings";
+import constants from "./constants";
+import icons from "./icons";
 import ThemeProvider from "./ThemeContext";
 
 
 export {
-    Colors,
-    Routes, 
-    Fonts, 
-    Images, 
-    Strings, 
-    Constants, 
-    Icons,
+    colors,
+    routes, 
+    fonts, 
+    images, 
+    strings, 
+    constants, 
+    icons,
     ThemeProvider
 };

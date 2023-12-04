@@ -2,7 +2,7 @@ import React, {memo} from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Routes, Constants, Colors, Fonts, Images} from '../core';
+import {routes, constants, colors, fonts, images} from '../core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -20,7 +20,7 @@ import Home from '../screens/Home';
 const TabIcon = ({ focused, color, name }) => {
     return (
         <View style={[styles.backgroundIcon,
-            focused && {backgroundColor: Colors.whiteBackground, minHeight: 44, minWidth: 44}
+            focused && {backgroundColor: "red", minHeight: 44, minWidth: 44}
         ]}>
             <Ionicons size={focused?28:20} color={color} name={name} style={styles.tabIcon} />
         </View>
@@ -38,9 +38,9 @@ function MyTabs() {
             tabBarHideOnKeyboard: true,
             tabBarShowLabel: false,
             tabBarStyle: {
-                height: Constants.height*0.065,
+                height: constants.height*0.065,
 
-                backgroundColor: Colors.backgroundColor,
+                backgroundColor: 'white',
                 borderWidth: 0,
             },
             tabBarLabelStyle: {
@@ -52,7 +52,7 @@ function MyTabs() {
                 name={"Home"} 
                 component={Home} 
                 options={{
-                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? Colors.black:Colors.placeholderTextColor} name={"home"} />,
+                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? "" : "" } name={"home"} />,
                     
                 }}
             />
@@ -60,7 +60,7 @@ function MyTabs() {
                 name={"CityList"} 
                 component={View} 
                 options={{
-                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? Colors.black:Colors.placeholderTextColor} name={"earth"} />,
+                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? "" : "" } name={"earth"} />,
                     
                 }}
             />
@@ -68,7 +68,7 @@ function MyTabs() {
                 name={"Menu"} 
                 component={View} 
                 options={{
-                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? Colors.black:Colors.placeholderTextColor} name={"menu"} />,
+                    tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? "" : "" } name={"menu"} />,
                     
                 }}
             />
@@ -96,9 +96,9 @@ const HomeNavigation = memo(() => {
 
 const styles = StyleSheet.create({
     homeLogo: {
-        height: Constants.width*0.095,
-        width: Constants.width*0.095,
-        backgroundColor: Colors.redText,
+        height: constants.width*0.095,
+        width: constants.width*0.095,
+        backgroundColor: "white",
         borderRadius: 100,
     },
     tabIcon: {
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     backgroundIcon: {
         backgroundColor: "#d0f0f0",
         borderRadius: 15,
-        padding: Constants.width*0.012,
+        padding: constants.width*0.012,
         minHeight: 40, 
         minWidth: 40,
         justifyContent: "center",

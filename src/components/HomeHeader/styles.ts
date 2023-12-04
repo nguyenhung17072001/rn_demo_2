@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {Colors, Fonts, Constants} from '../../core';
+import {colors, fonts, constants} from '../../core';
 const {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
     header: {
@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginTop: 35,
-        paddingVertical: Constants.height * 0.012,
-        paddingHorizontal: Constants.width * 0.04
+        paddingVertical: constants.height * 0.012,
+        paddingHorizontal: constants.width * 0.04
     },
     headerName: {
-        color: Colors.blackText,
-        fontFamily: Fonts.bold,
+        color: "#000000",
+        fontFamily: fonts.bold,
         fontSize: 15,
     }
 

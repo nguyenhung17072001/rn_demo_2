@@ -1,6 +1,6 @@
 import React, {memo, useEffect, useRef} from 'react';
 import {View, Text, Image, StatusBar, SafeAreaView} from 'react-native';
-import {Images, Colors, Strings} from '../../core';
+import { images, colors, strings } from '../../core';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -15,7 +15,7 @@ const Splash = memo(() => {
     const timeout = setTimeout(() => {
       
       
-        navigation.replace('HomeNavigation');
+        navigation.replace('LanguageSelection');
       
     }, 1500);
   }, []);
@@ -23,17 +23,17 @@ const Splash = memo(() => {
   return (
     <SafeAreaView style={styles.container}>
         <StatusBar
-            backgroundColor={Colors.backgroundColor}
+            backgroundColor={"white"}
             barStyle={'dark-content'}
         />
         
         <Image
             resizeMode="contain"
             style={[styles.logo]}
-            source={Images.logo}
+            source={images.logo}
         />
         <Text style={styles.appNameText}>
-            {Strings.appName}
+            {strings.appName}
         </Text>
         
 

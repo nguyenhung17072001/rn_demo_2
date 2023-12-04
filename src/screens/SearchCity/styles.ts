@@ -1,9 +1,9 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {Colors, Fonts, Constants} from '../../core';
+import {colors, fonts, constants} from '../../core';
 const {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.backgroundColor,
+        backgroundColor: "white",
         flex: 1,
 
     },
