@@ -72,13 +72,7 @@ const colorOptions = {
     PRIMARY_COLOR_BOLD: "#4527A0",
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
-  green: {
-    PRIMARY_COLOR_FAINT: "#E8F5E9",
-    PRIMARY_COLOR_LIGHT: "#81C784",
-    PRIMARY_COLOR: "#4CAF50",
-    PRIMARY_COLOR_BOLD: "#2E7D32",
-    PRIMARY_FOREGROUND_COLOR: "#ffffff"
-  }
+  green: "green",
 };
 
 const Colors = {
