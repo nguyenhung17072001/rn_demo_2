@@ -12,13 +12,13 @@ const Register = memo(() => {
     const navigation = useNavigation();
     const { t } = useTranslation();
     
-    const [username, setUsername] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
 
     const handleRegister = () => {
         auth()
-            .createUserWithEmailAndPassword('jaene.doe@example.com', 'SuperSecretPassword!')
+            .createUserWithEmailAndPassword(email, password)
             .then(() => {
                 console.log('User account created & signed in!');
             })
@@ -51,10 +51,10 @@ const Register = memo(() => {
 
             <View>
                 <Input 
-                    label= {t('username')}
-                    placeholder={t('enter your username')}
-                    value={username}
-                    onChangeText={(text) => setUsername(text)}
+                    label= {"Email"}
+                    placeholder={t('enter your email')}
+                    value={email}
+                    onChangeText={(text) => setEmail(text)}
                 />
                 <Input 
                     label={t('password')}

@@ -32,8 +32,8 @@ const Login = memo(() => {
 
             <View>
                 <Input 
-                    label= {t('username')}
-                    placeholder={t('enter your username')}
+                    label="Email"
+                    placeholder={t('enter your email')}
                     value={username}
                     onChangeText={(text) => setUsername(text)}
                 />
