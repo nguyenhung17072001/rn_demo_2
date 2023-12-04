@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from 'react';
-import { View, Text, Image, StatusBar, SafeAreaView, TouchableOpacity, ScrollView, TextInput} from 'react-native';
+import { View, Text, Image, StatusBar, SafeAreaView, TouchableOpacity, ScrollView, TextInput, Alert} from 'react-native';
 import { images, colors, strings } from '../../core';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
@@ -7,14 +7,33 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import Input from '../../components/Input';
-
+import auth from '@react-native-firebase/auth';
+import OverlayLoading from 'react-native-loading-spinner-overlay';
 const Login = memo(() => {
     const navigation = useNavigation();
     const { t } = useTranslation();
     
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
+    const handleLogin = () => {
+        if(username && password) {
+            setIsLoading(true);
+            auth()
+            .signInWithEmailAndPassword(username, password)
+            .then(async(res)=> {
+                setIsLoading(false);
+                await AsyncStorage.setItem("uid", res.user.uid);
+                navigation.replace("HomeNavigation");
+            })
+            .catch((error)=> {
+                setIsLoading(false);
+                Alert.alert("Đăng nhập thất bại");
+                console.log("err: ", error);
+            })
+        }
+    }
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar
@@ -44,7 +63,7 @@ const Login = memo(() => {
                     onChangeText={(text) => setPassword(text)}
                     secureTextEntry={true}
                 />
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity onPress={handleLogin} style={styles.button}>
                     <Text style={styles.textButton}>
                         { t('login') }
                     </Text>
@@ -62,7 +81,9 @@ const Login = memo(() => {
             <View />
            
             
-            
+            <OverlayLoading
+                visible={isLoading}
+            />
         </SafeAreaView>
     );
 });

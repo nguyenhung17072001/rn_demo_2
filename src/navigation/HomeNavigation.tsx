@@ -11,6 +11,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 //tabbar
 import Home from '../screens/Home';
+import Menu from '../screens/Menu';
 
 
 //router
@@ -66,7 +67,7 @@ function MyTabs() {
             />
             <Tab.Screen 
                 name={"Menu"} 
-                component={View} 
+                component={Menu} 
                 options={{
                     tabBarIcon: ({ focused, color }) => <TabIcon focused={focused} color={focused? "" : "" } name={"menu"} />,
                     

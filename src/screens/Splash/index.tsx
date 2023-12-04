@@ -13,14 +13,17 @@ const Splash = memo(() => {
   useEffect(() => {
     clearTimeout(timeout);
     const timeout = setTimeout( async() => {
+      const uid = await AsyncStorage.getItem("uid");
       const languageValue = await AsyncStorage.getItem("isSelectedlanguage")
-        if(languageValue == "isSelectedlanguage") {
-          navigation.replace('AuthNavigation');
-        } else {
-          navigation.replace('LanguageSelection');
-        }
+      if(languageValue != "isSelectedlanguage") {
+        navigation.replace('LanguageSelection');
+      } else if(languageValue == "isSelectedlanguage" && uid) {
+        navigation.replace("HomeNavigation");
+      }
+      else {
+        navigation.replace('AuthNavigation');
+      }
         
-      
     }, 1500);
   }, []);
 

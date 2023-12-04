@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
         flex: 1,
 
     },
+    buttonText: {
+        color: "blue",
+        fontSize: 14
+    }
     
   
 });
