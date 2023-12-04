@@ -14,11 +14,17 @@ const styles = StyleSheet.create({
         color: colors.colorOptions.green,
         textAlign: 'center',
     },
+    row: {
+        flexDirection: "row",
+        marginTop: constants.height * 0.01,
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginHorizontal: constants.width * 0.04,
+    },
     forgotPasswordText: {
         color: "grey",
-        textAlign: "right",
-        marginHorizontal: constants.width * 0.04,
-        marginTop: constants.height * 0.01,
+        
+        
     },
     button: {
         backgroundColor: colors.colorOptions.green,

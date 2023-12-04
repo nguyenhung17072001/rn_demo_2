@@ -49,9 +49,14 @@ const Login = memo(() => {
                         { t('login') }
                     </Text>
                 </TouchableOpacity>
-                <Text style={styles.forgotPasswordText}>
-                    {t('forgot password')}
-                </Text>
+                <View style={styles.row}>
+                    <Text style={styles.forgotPasswordText}>
+                        {t('register')}
+                    </Text>
+                    <Text style={styles.forgotPasswordText}>
+                        {t('forgot password')}
+                    </Text>
+                </View>
             </View>
 
             <View />
