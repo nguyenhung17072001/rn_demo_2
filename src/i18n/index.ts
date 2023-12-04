@@ -12,7 +12,12 @@ const resources = {
             "vi": "Vietnamese",
             "en": "English",
             "confirm": "Confirm",
-            "login": "Login"
+            "login": "Login",
+            "username": "Username",
+            "enter your username": "Enter your username",
+            "password": "Password",
+            "enter password": "Enter password",
+            "forgot password": "Forgot password",
         }
     },
     vi: {
@@ -23,6 +28,11 @@ const resources = {
             "en": "Tiếng Anh",
             "confirm": "Xác nhận",
             "login": "Đăng nhập",
+            "username": "Tên đăng nhập",
+            "enter your username": "Nhập tên đăng nhập",
+            "password": "Mật khẩu",
+            "enter password": "Nhập mật khẩu",
+            "forgot password": "Quên mật khẩu",
         }
     }
 };
