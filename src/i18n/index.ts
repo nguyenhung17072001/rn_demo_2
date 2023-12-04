@@ -12,6 +12,7 @@ const resources = {
             "vi": "Vietnamese",
             "en": "English",
             "confirm": "Confirm",
+            "login": "Login"
         }
     },
     vi: {
@@ -21,6 +22,7 @@ const resources = {
             "vi": "Tiếng Việt",
             "en": "Tiếng Anh",
             "confirm": "Xác nhận",
+            "login": "Đăng nhập",
         }
     }
 };

@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from 'react';
-import { View, Text, Image, StatusBar, SafeAreaView, TouchableOpacity} from 'react-native';
+import { View, Text, Image, StatusBar, SafeAreaView, TouchableOpacity, ScrollView} from 'react-native';
 import { images, colors, strings } from '../../core';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
@@ -21,6 +21,12 @@ const Login = memo(() => {
                 backgroundColor="transparent"
                
             />
+
+            <View>
+                <Text style={styles.loginText}>
+                    { t('login') }
+                </Text>
+            </View>
            
             
             

@@ -7,6 +7,11 @@ const styles = StyleSheet.create({
         flex: 1,
 
     },
+    loginText: {
+        fontSize: 19,
+        fontFamily: fonts.bold,
+        color: colors.colorOptions.green,
+    }
   
 
     
