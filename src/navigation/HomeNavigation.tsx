@@ -23,8 +23,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     const {theme, setTheme} = useContext(ThemeContext);
-    
-    console.log(theme);
+
     const TabIcon = ({ focused, color, name }) => {
     
         return (
