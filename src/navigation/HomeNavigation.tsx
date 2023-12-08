@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useContext} from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
-
+import { ThemeContext } from '../core/ThemeContext';
 
 //tabbar
 import Home from '../screens/Home';
@@ -18,18 +18,23 @@ import Menu from '../screens/Menu';
 
 
 
-const TabIcon = ({ focused, color, name }) => {
-    return (
-        <View style={[styles.backgroundIcon,
-            focused && {backgroundColor: "red", minHeight: 44, minWidth: 44}
-        ]}>
-            <Ionicons size={focused?28:20} color={color} name={name} style={styles.tabIcon} />
-        </View>
-    );
-}
+
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+    const {theme, setTheme} = useContext(ThemeContext);
+    
+    console.log(theme);
+    const TabIcon = ({ focused, color, name }) => {
+    
+        return (
+            <View style={[theme =="light"? styles.backgroundIcon:styles.backgroundIconDark,
+                focused && {backgroundColor: theme =="light"?'green':'black', minHeight: 44, minWidth: 44}
+            ]}>
+                <Ionicons size={focused?28:20} color={color} name={name} style={styles.tabIcon} />
+            </View>
+        );
+    }
     return (
         <Tab.Navigator 
         initialRouteName='Home'
@@ -105,6 +110,15 @@ const styles = StyleSheet.create({
     tabIcon: {
         
         //backgroundColor: "red"
+    },
+    backgroundIconDark: {
+        backgroundColor: "grey",
+        borderRadius: 15,
+        padding: constants.width*0.012,
+        minHeight: 40, 
+        minWidth: 40,
+        justifyContent: "center",
+        alignItems: "center",
     },
     backgroundIcon: {
         backgroundColor: "#d0f0f0",
