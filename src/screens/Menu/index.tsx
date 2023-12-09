@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemeContext } from '../../core/ThemeContext';
-
+import i18n from '../../i18n';
 const Menu = memo(() => {
     const { t } = useTranslation();
     const {theme, setTheme} = useContext(ThemeContext);
     const navigation = useNavigation();
     const [isEnabled, setIsEnabled] = useState<boolean>(theme=="dark"?true : false);
- 
+    const [language, setLanguage] = useState<string>('vi');
 
 
     const handleLogout = () => {
@@ -52,6 +52,26 @@ const Menu = memo(() => {
                     value={isEnabled}
                     //style={styles.switch}
                 />
+            </View>
+            <View style={styles.row}>
+                <TouchableOpacity onPress={()=>i18n.changeLanguage('vi')} style={theme=="light"?
+                    [styles.languageButton, i18n.language=='en' && {backgroundColor: "grey", borderColor: "green", borderWidth: 1}]
+                    : 
+                    [styles.languageButtonDark, i18n.language=='vi' && {backgroundColor: "grey", borderWidth: 1}]
+                }
+                    
+                    >
+                    <Text style={styles.buttonText}>{t('vi')}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>i18n.changeLanguage('en')} style={theme=="light"?
+                    [styles.languageButton, i18n.language=='vi' && {backgroundColor: "grey", borderColor: "green", borderWidth: 1}]
+                    :
+                    [styles.languageButtonDark, i18n.language=='en' && {backgroundColor: "grey", borderWidth: 1}]
+                }
+                    
+                    >
+                    <Text style={styles.buttonText}>{t('en')}</Text>
+                </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={handleLogout} style={theme=="light"?styles.button:styles.buttonDark}>
                 <Text style={styles.buttonText}>

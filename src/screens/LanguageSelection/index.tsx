@@ -14,7 +14,7 @@ const LanguageSelectionScreen = memo(() => {
     const { t } = useTranslation();
     const [language, setLanguage] = useState<string>("vi");
     const handleLanguage = async () => {
-        await i18n.changeLanguage('vi');
+        await i18n.changeLanguage(language);
         AsyncStorage.setItem("isSelectedlanguage", "isSelectedlanguage")
         .then(() => {
             navigation.replace('HomeNavigation');

@@ -21,7 +21,8 @@ const resources = {
             "register": "Register",
             "repassword": "Repassword",
             "logout": "Logout",
-            "theme": "Dark theme"
+            "theme": "Dark theme",
+            "language": "language"
         }
     },
     vi: {
@@ -40,7 +41,8 @@ const resources = {
             "register": "Đăng ký",
             "repassword": "Nhập lại mật khẩu",
             "logout": "Đăng xuất",
-            "theme": "Chế độ ban đêm"
+            "theme": "Chế độ ban đêm",
+            "language": "Ngôn ngữ"
         }
     }
 };

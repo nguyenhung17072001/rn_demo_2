@@ -34,6 +34,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#3a3b3c",
         borderRadius: 10,
     },
+    row: {
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        marginHorizontal: constants.width*0.04,
+    },
     button: {
         marginTop: 20,
         marginHorizontal: constants.width*0.04,
@@ -56,11 +61,55 @@ const styles = StyleSheet.create({
         paddingHorizontal: constants.width*0.04,
 
     },
+    languageButton: {
+        marginTop: 20,
+        //marginHorizontal: constants.width*0.04,
+        paddingVertical: constants.width*0.04,
+        justifyContent: "center",
+        alignItems: 'flex-start',
+        backgroundColor: "green",
+        borderRadius: 10,
+        paddingHorizontal: constants.width*0.04,
+
+    },
+    languageButtonDark: {
+        marginTop: 20,
+        //marginHorizontal: constants.width*0.04,
+        paddingVertical: constants.width*0.04,
+        justifyContent: "center",
+        alignItems: 'flex-start',
+        backgroundColor: "#3a3b3c",
+        borderRadius: 10,
+        paddingHorizontal: constants.width*0.04,
+
+    },
     buttonText: {
         color: "white",
         fontSize: 14,
         fontFamily: fonts.bold
     },
+
+
+    //
+
+ 
+    dropdown: {
+        marginTop: 20,
+        height: 50,
+        borderWidth: 0.5,
+        borderRadius: 8,
+        paddingHorizontal: 8,
+        marginHorizontal: constants.width*0.04,
+        backgroundColor: "green"
+    },
+    placeholderStyle: {
+        color: "white",
+        fontFamily: fonts.semiBold,
+    },
+    itemTextStyle: {
+        color: "red"
+    }
+    
     
     
   
